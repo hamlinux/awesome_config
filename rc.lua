@@ -230,6 +230,15 @@ globalkeys = awful.util.table.join(
         end),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end),
 
+    -- User Key Bindings
+
+	awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn("firefox") end),
+        awful.key({ modkey, "Shift" }, "m", function () awful.util.spawn("thunderbird") end),
+        awful.key({ modkey, "Shift" }, "e", function () awful.util.spawn("geany") end),
+        awful.key({ modkey, "Shift" }, "d", function () awful.util.spawn("keepassx") end),
+        awful.key({ modkey, "Shift" }, "n", function () awful.util.spawn("gigolo") end),
+        awful.key({ modkey, "Shift" }, "v", function () awful.util.spawn("vlc") end),
+
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end),
